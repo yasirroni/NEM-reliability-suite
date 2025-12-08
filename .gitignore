@@ -35,3 +35,10 @@ trash/
 
 # Files used for testing and debugging
 _personal scripts/*
+
+# Data file extensions
+*.xlsx
+*.csv
+*.arrow
+*.zip
+*.xml

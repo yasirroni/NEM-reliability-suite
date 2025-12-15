@@ -2,6 +2,8 @@
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
+HiGHS = "87dc4568-4c63-4d18-b0c0-bb2238e4078b"
+JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
 Measures = "442fdcdd-2543-5da2-b0f3-8c86c306513e"
 PISP = "0cf86302-bd88-49fb-82d1-7e27fc78d6eb"
 PRASNEM = "dd18fea1-acda-4cb9-9bf0-b27bbe00ccb1"
@@ -10,6 +12,6 @@ PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
 SiennaNEM = "2b2140f2-b9c0-4054-8dfe-2e6bd74cbbbe"
 
 [sources]
-PISP = {url = "https://github.com/ARPST-UniMelb/PISP.jl"}
-PRASNEM = {url = "https://github.com/ARPST-UniMelb/PRASNEM.jl"}
-SiennaNEM = {url = "https://github.com/ARPST-UniMelb/SiennaNEM.jl"}
+PISP = {rev = "main", url = "https://github.com/ARPST-UniMelb/PISP.jl"}
+PRASNEM = {rev = "main", url = "https://github.com/ARPST-UniMelb/PRASNEM.jl"}
+SiennaNEM = {rev = "main", url = "https://github.com/ARPST-UniMelb/SiennaNEM.jl"}

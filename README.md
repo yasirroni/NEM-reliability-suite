@@ -73,17 +73,17 @@ data       = SiennaNEM.get_data(input_folder, timeseries_folder);
 sys_sienna = SiennaNEM.create_system!(data);
 SiennaNEM.add_ts!(
     sys_sienna, data;
-    horizon=horizon,  # horizon of each time slice that will be used in the study
-    interval=interval,  # interval within each time slice, not the resolution of the time series
-    scenario_name=scenario_name,  # scenario number
+    horizon       = horizon,  # horizon of each time slice that will be used in the study
+    interval      = interval,  # interval within each time slice, not the resolution of the time series
+    scenario_name = scenario_name,  # scenario number
 );
 
 template_uc = SiennaNEM.build_problem_base_uc();
-results = SiennaNEM.run_decision_model_loop(
-    template_uc, sys_sienna;
-    simulation_folder=simulation_output_folder,
-    simulation_name=simulation_name,
-    decision_model_kwargs=(optimizer=optimizer_with_attributes(HiGHS.Optimizer, "mip_rel_gap" => 0.01),),)
+results     = SiennaNEM.run_decision_model_loop(
+                                template_uc, sys_sienna;
+                                simulation_folder     = simulation_output_folder,
+                                simulation_name       = simulation_name,
+                                decision_model_kwargs = (optimizer=optimizer_with_attributes(HiGHS.Optimizer, "mip_rel_gap" => 0.01),),)
 
 ```
 

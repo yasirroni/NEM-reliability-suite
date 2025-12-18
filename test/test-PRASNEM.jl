@@ -11,9 +11,9 @@ timeseries_folder = joinpath(input_folder, "schedule-1w")
 # ================================== #
 # Creation of system files
 # ================================== #
-sys_sc1 = PRASNEM.create_pras_file(start_dt, end_dt, input_folder, output_folder, timeseries_folder; regions_selected=collect(1:12), scenario = 1)
-sys_sc2 = PRASNEM.create_pras_file(start_dt, end_dt, input_folder, output_folder, timeseries_folder; regions_selected=collect(1:12), scenario = 2)
-sys_sc3 = PRASNEM.create_pras_file(start_dt, end_dt, input_folder, output_folder, timeseries_folder; regions_selected=collect(1:12), scenario = 3)
+sys_sc1 = PRASNEM.create_pras_file(start_dt, end_dt, input_folder, timeseries_folder; output_folder=output_folder, regions_selected=collect(1:12), scenario = 1)
+sys_sc2 = PRASNEM.create_pras_file(start_dt, end_dt, input_folder, timeseries_folder; output_folder=output_folder, regions_selected=collect(1:12), scenario = 2)
+sys_sc3 = PRASNEM.create_pras_file(start_dt, end_dt, input_folder, timeseries_folder; output_folder=output_folder, regions_selected=collect(1:12), scenario = 3)
 
 PRASNEM.run_pras_study(sys_sc1, 1000)
 PRASNEM.run_pras_study(sys_sc2, 1000)
